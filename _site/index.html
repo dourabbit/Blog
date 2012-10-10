@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>chengfu 的 Pathtracing</title>
+    
+    <meta name="author" content="Name Lastname">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+        
+        
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                               tex2jax: {
+                               inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                               processEscapes: true
+                               }
+                               });
+            </script>
+        
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                               tex2jax: {
+                               skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                               }
+                               });
+            </script>
+        
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Queue(function() {
+                              var all = MathJax.Hub.getAllJax(), i;
+                              for(i=0; i < all.length; i += 1) {
+                              all[i].SourceElement().parentNode.className += ' has-jax';
+                              }
+                              });
+            </script>
+        
+        <script type="text/javascript"
+            src="/assets/themes/twitter/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+            </script>
+        
+        
+        
+    </head>
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Jekyll Bootstrap</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>chengfu 的 Pathtracing  <small>open source</small></h1>
+</div>
+
+<div class="row">
+  <div class="span12">
+    <h1 id='_pathtracing'>关于渲染器， 关于pathtracing</h1>
+
+<p>关于渲染器的定义，大家可以去wiki一下。这里我只给出一些个人的看法。 渲染器其实就是一个能把抽象的模型数据，经过复杂的数学和物理公式的计算，最后生成具体图像的软件。 它已经应用到我们生活的方方面面， 从console game到手机游戏， 从电影到广告， 从产品设计到室内家具设计。渲染算法是图形学算法中最重要部分之一。 渲染器也是众多软件中价格高昂的之一。 同时，因为软件的算法强度特别高，更需要高昂的硬件投入，中国（除香港，澳门，以及台湾）几乎所有制作公司都在用盗版。 这样造成了， 我们从教育到科研再到商业都高度依赖国外产品。</p>
+
+<p>Pathtracing是最古老的全局光照算法， 是美国加州理工学院 教授在1983年发表论文中提出的算法。 Pathtracing属于Unbias算法， 适合于设计领域。 Pathtracing的实现代码精简， 同时也被美国多所著名大学作为图形学课程的作业。 $e^x = \sum_{n=0}^\infty \frac{x^n}{n!} = \lim_{n\rightarrow\infty} (1+x/n)^n$</p>
+
+<h1 id='projmetoo_'>ProjMeToo 目的</h1>
+
+<pre><code>创建一款针对教育的功能完整的跨平台开源渲染器，并附有完善的中文文档
+
+projMeToo不是产品级渲染器
+projMeToo不是单一平台开发
+projMeToo不是商业项目 所有代码遵循MIT License 对于商业项目 作者保留所有权利</code></pre>
+
+<h1 id='id21'>问题</h1>
+
+<p>path tracing， bidirectional tracing &amp; Metropolis light transporting 利弊个是什么？那个更能解决通用问题</p>
+
+<h1 id='id22'>进度</h1>
+
+<p>目前的版本为 0.1.0， 可以用效率较高的path tracing计算cornel box。 但是模型和ray-geometry collision test 还是用的参数方程.</p>
+
+<h1 id='id23'>数学</h1>
+
+<h1 id='id24'>算法</h1>
+
+<h1 id='id25'>视频</h1>
+
+<h1 id='appendix'>Appendix</h1>
+
+<h3 id='appendix_'>Appendix 数学例子</h3>
+
+<h3 id='appendix_'>Appendix 资料</h3>
+
+<h3 id='appendix_pseudocode'>Appendix pseudo-code</h3>
+
+<h3 id='appendix_todo_list'>Appendix To-do list</h3>
+
+<pre><code>Path tracing 算法			－－－ 	0.1.x (we are here)
+离散几何体				－－－	0.2.x
+Ray－geometry优化			－－－	0.3.x
+Texture					－－－	0.4.x
+Shading API				－－－	0.5.x
+Sampler					－－－	0.6.x</code></pre>
+
+<h3 id='appendix_'>Appendix 各种平台运行速度比较</h3>
+
+<h3 id='appendix_'>Appendix 感谢</h3>
+
+<pre><code>龙芯集团提供了3个月的电脑</code></pre>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Name Lastname 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
