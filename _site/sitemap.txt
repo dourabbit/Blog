@@ -1,8 +1,8 @@
 
-http://username.github.com/archive.html
-http://username.github.com/atom.xml
-http://username.github.com/categories.html
-http://username.github.com/index.html
-http://username.github.com/pages.html
-http://username.github.com/sitemap.txt
-http://username.github.com/tags.html
+http://dourabbit.github.com/archive.html
+http://dourabbit.github.com/atom.xml
+http://dourabbit.github.com/categories.html
+http://dourabbit.github.com/index.html
+http://dourabbit.github.com/pages.html
+http://dourabbit.github.com/sitemap.txt
+http://dourabbit.github.com/tags.html
